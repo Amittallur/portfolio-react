@@ -12,7 +12,7 @@ const scrollToSection = (id) => {
 const App = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-zinc-900 text-white">
     <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.2),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(249,115,22,0.18),_transparent_55%)] opacity-60" />
-    <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col px-4 py-6 md:px-8">
+    <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 py-6 sm:px-6 lg:px-10">
       <header className="flex items-center justify-between rounded-2xl border border-white/5 bg-black/20 px-4 py-3 shadow-md shadow-cyan-500/10 backdrop-blur transition hover:border-cyan-400/70 hover:shadow-cyan-500/30">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-500/10 ring-2 ring-cyan-400/60">
