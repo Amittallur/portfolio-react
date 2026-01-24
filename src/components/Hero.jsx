@@ -1,6 +1,6 @@
 import { Button, Chip, Image } from '@nextui-org/react'
 import { motion } from 'framer-motion'
-import profile from '../assets/amit.jpeg'
+import profile from '../assets/amit.jpg'
 
 const MotionButton = motion(Button)
 
