@@ -7,10 +7,10 @@ const MenuBar = ({ clock, focusedLabel, onEnter2026, onOpen, onSpotlight, onLaun
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
   >
-    <button type="button" className="mac-apple" onClick={() => onOpen('welcome')} aria-label="AmitOS home">
+    <button type="button" className="mac-apple" onClick={() => onOpen('welcome')} aria-label="Home">
       AT
     </button>
-    <strong>{focusedLabel ?? 'AmitOS'}</strong>
+    <strong>{focusedLabel ?? 'Finder'}</strong>
     <button type="button" onClick={onLaunchpad}>
       Launchpad
     </button>

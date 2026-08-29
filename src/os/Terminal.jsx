@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { apps, profile } from '../data/site'
 
 const Terminal = ({ onOpen, onEnter2026 }) => {
-  const [lines, setLines] = useState(['AmitOS terminal. Type help.'])
+  const [lines, setLines] = useState(['Terminal. Type help.'])
   const [value, setValue] = useState('')
   const end = useRef(null)
 
@@ -64,7 +64,7 @@ const Terminal = ({ onOpen, onEnter2026 }) => {
           setValue('')
         }}
       >
-        <span>amit@os ~ %</span>
+        <span>amit ~ %</span>
         <input value={value} onChange={(event) => setValue(event.target.value)} autoFocus spellCheck={false} />
       </form>
       <div ref={end} />

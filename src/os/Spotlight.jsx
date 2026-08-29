@@ -35,7 +35,7 @@ const Spotlight = ({ open, onClose, onOpen, onEnter2026 }) => {
       >
         <input
           autoFocus
-          placeholder="Search AmitOS"
+          placeholder="Search"
           value={q}
           onChange={(event) => setQ(event.target.value)}
           onKeyDown={(event) => {
