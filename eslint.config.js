@@ -33,4 +33,10 @@ export default [
       'react/prop-types': 'off',
     },
   },
+  {
+    files: ['src/scene/**/*.{js,jsx}', 'src/era/**/*.{js,jsx}'],
+    rules: {
+      'react/no-unknown-property': 'off',
+    },
+  },
 ]
