@@ -1091,7 +1091,7 @@ body {
 
 .split {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 180px 1fr;
   gap: 16px;
 }
 

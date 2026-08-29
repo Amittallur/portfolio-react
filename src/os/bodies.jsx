@@ -6,6 +6,7 @@ export const WelcomeBody = ({ onOpen, onEnter2026 }) => {
   const files = [
     { id: 'about', name: 'About.txt', kind: 'Document' },
     { id: 'work', name: 'Experience.pdf', kind: 'Document' },
+    { id: 'projects', name: 'Projects.pdf', kind: 'Document' },
     { id: 'skills', name: 'Stack.md', kind: 'Document' },
     { id: 'contact', name: 'Contact.vcf', kind: 'Card' },
     { id: 'terminal', name: 'Terminal.app', kind: 'Application' },
@@ -19,7 +20,10 @@ export const WelcomeBody = ({ onOpen, onEnter2026 }) => {
           Home
         </button>
         <button type="button" className="finder-link" onClick={() => onOpen('work')}>
-          Work
+          Experience
+        </button>
+        <button type="button" className="finder-link" onClick={() => onOpen('projects')}>
+          Projects
         </button>
         <button type="button" className="finder-link finder-link-era" onClick={onEnter2026}>
           Portfolio
@@ -93,16 +97,16 @@ export const WorkBody = () => {
   return (
     <div className="split">
       <aside>
+        <p className="os-kicker">Experience</p>
         {experiences.map((item, index) => (
-          <button key={item.company} type="button" className={active === index ? 'on' : ''} onClick={() => setActive(index)}>
-            {item.company}
+          <button
+            key={item.company}
+            type="button"
+            className={active === index ? 'on' : ''}
+            onClick={() => setActive(index)}
+          >
+            {item.code}
           </button>
-        ))}
-        <p className="os-kicker">Projects</p>
-        {projects.map((project) => (
-          <p key={project.name} className="os-meta">
-            {project.name}
-          </p>
         ))}
       </aside>
       <div className="os-copy">
@@ -116,18 +120,37 @@ export const WorkBody = () => {
           ))}
         </ul>
         <p className="os-meta">{job.tech.join(' · ')}</p>
-        {active === 0 && (
-          <section className="os-block">
-            <h3>{projects[0].name}</h3>
-            <p>{projects[0].summary}</p>
-          </section>
-        )}
-        {active === 1 && (
-          <section className="os-block">
-            <h3>{projects[1].name}</h3>
-            <p>{projects[1].summary}</p>
-          </section>
-        )}
+      </div>
+    </div>
+  )
+}
+
+export const ProjectsBody = () => {
+  const [active, setActive] = useState(0)
+  const project = projects[active]
+  const job = experiences[project.job]
+  return (
+    <div className="split">
+      <aside>
+        <p className="os-kicker">Projects</p>
+        {projects.map((item, index) => (
+          <button
+            key={item.name}
+            type="button"
+            className={active === index ? 'on' : ''}
+            onClick={() => setActive(index)}
+          >
+            {item.name}
+          </button>
+        ))}
+      </aside>
+      <div className="os-copy">
+        <h2>{project.name}</h2>
+        <p className="os-meta">
+          {job.company} · {job.period} · {job.location}
+        </p>
+        <p>{project.summary}</p>
+        <p className="os-meta">{job.tech.join(' · ')}</p>
       </div>
     </div>
   )
@@ -207,6 +230,7 @@ export const bodies = {
   welcome: WelcomeBody,
   about: AboutBody,
   work: WorkBody,
+  projects: ProjectsBody,
   skills: SkillsBody,
   contact: ContactBody,
   terminal: TerminalBody,

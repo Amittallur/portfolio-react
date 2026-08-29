@@ -14,6 +14,7 @@ import Era2026 from './era/Era2026'
 const defaults = {
   welcome: { x: 36, y: 56, w: 520 },
   work: { x: 180, y: 72, w: 620 },
+  projects: { x: 220, y: 96, w: 560 },
   about: { x: 240, y: 100, w: 460 },
   skills: { x: 90, y: 86, w: 480 },
   contact: { x: 260, y: 96, w: 420 },

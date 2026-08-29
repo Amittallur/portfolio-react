@@ -15,7 +15,7 @@ const Terminal = ({ onOpen, onEnter2026 }) => {
     const print = (text) => setLines((prev) => [...prev, `› ${raw}`, text])
     if (!input) return
     if (input === 'help') {
-      print('whoami · ls · open about|work|craft|mail · 2026 · contact · clear')
+      print('whoami · ls · open about|experience|projects|craft|mail · 2026 · contact · clear')
       return
     }
     if (input === 'whoami') {
@@ -41,7 +41,18 @@ const Terminal = ({ onOpen, onEnter2026 }) => {
     }
     if (input.startsWith('open ')) {
       const id = input.slice(5).trim()
-      const map = { about: 'about', work: 'work', craft: 'skills', skills: 'skills', mail: 'contact', contact: 'contact', finder: 'welcome', welcome: 'welcome' }
+      const map = {
+        about: 'about',
+        work: 'work',
+        experience: 'work',
+        projects: 'projects',
+        craft: 'skills',
+        skills: 'skills',
+        mail: 'contact',
+        contact: 'contact',
+        finder: 'welcome',
+        welcome: 'welcome',
+      }
       const target = map[id]
       if (target) {
         print(`Opening ${target}`)

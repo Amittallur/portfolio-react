@@ -13,7 +13,8 @@ export const profile = {
 
 export const apps = [
   { id: 'welcome', title: 'Finder', label: 'Welcome', icon: 'finder' },
-  { id: 'work', title: 'Work', label: 'Selected Work', icon: 'work' },
+  { id: 'work', title: 'Experience', label: 'Experience', icon: 'work' },
+  { id: 'projects', title: 'Projects', label: 'Projects', icon: 'projects' },
   { id: 'about', title: 'About', label: 'About', icon: 'about' },
   { id: 'skills', title: 'Craft', label: 'What I Do', icon: 'craft' },
   { id: 'contact', title: 'Mail', label: 'Mail', icon: 'mail' },
@@ -55,11 +56,13 @@ export const experiences = [
 export const projects = [
   {
     name: 'JivaHealthCares',
+    job: 0,
     summary:
       'Healthcare platform for Restore, REM, and DME with RBAC, role-specific dashboards, appointment automation, a digital library, and Twilio chat.',
   },
   {
     name: 'Enterprise Automation Suite',
+    job: 1,
     summary:
       'Internal CloudOps and GIS tools: IP management, OpenShift automation, BLE registration, and shift handover — React/Next.js with REST-backed workflows.',
   },

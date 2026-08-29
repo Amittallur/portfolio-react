@@ -30,28 +30,19 @@ const jobs = [
   },
 ]
 
-const projectCards = [
-  {
-    id: '01',
-    tone: 'lime',
-    title: projects[0].name,
-    role: experiences[0].company,
+const projectCards = projects.map((project, index) => {
+  const job = experiences[project.job]
+  return {
+    id: String(index + 1).padStart(2, '0'),
+    tone: index === 0 ? 'lime' : 'orange',
+    title: project.name,
+    role: job.company,
     when: '',
     where: '',
-    text: [projects[0].summary],
-    tech: experiences[0].tech.slice(0, 5),
-  },
-  {
-    id: '02',
-    tone: 'orange',
-    title: projects[1].name,
-    role: experiences[1].company,
-    when: '',
-    where: '',
-    text: [projects[1].summary],
-    tech: experiences[1].tech,
-  },
-]
+    text: [project.summary],
+    tech: job.tech.slice(0, 5),
+  }
+})
 
 const Card = ({ card }) => (
   <article className={`era-card is-${card.tone}`}>

@@ -7,6 +7,7 @@ const glyphs = {
   launchpad: 'fluent-color:apps-48',
   finder: 'fluent-color:document-folder-24',
   work: 'fluent-color:briefcase-48',
+  projects: 'fluent-color:code-block-48',
   about: 'fluent-color:person-48',
   craft: 'fluent-color:code-block-48',
   mail: 'fluent-color:mail-48',
