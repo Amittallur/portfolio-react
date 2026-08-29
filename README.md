@@ -1,8 +1,18 @@
-# React + Vite
+# Amit Tallur
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend engineer portfolio. Live at **[amittallur.netlify.app](https://amittallur.netlify.app/)**.
 
-Currently, two official plugins are available:
+A mac-style desktop (Finder, Experience, Projects, Terminal) with a full-page Portfolio overlay.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Build: `npm run build` · preview: `npm run preview`
+
+## Stack
+
+Vite, React 18, Tailwind, Framer Motion, GSAP.
